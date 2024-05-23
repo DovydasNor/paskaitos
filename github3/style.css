@@ -1,0 +1,118 @@
+body{
+    background-color: hsl(30, 54%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin:auto;
+}
+
+main{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 30px;
+    width: 47%;
+}
+
+img{
+    border-radius: 15px;
+    width: 100%;
+}
+
+h1{
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+h2{
+    font-family: "Young Serif";
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    padding-left: 15px;
+}
+
+p{
+    font-family: "Outfit";
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+}
+
+li{
+    font-family: "Outfit";
+    color: hsl(30, 10%, 34%);
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.instructions{
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: hsl(30, 18%, 87%);
+}
+
+li::marker{
+    color: hsl(14, 45%, 36%);
+    
+}
+
+ol li::marker{
+    font-weight: bold;
+}
+
+.sor p{
+ line-height: 25px;
+ color: hsl(30, 10%, 34%);
+}
+
+.sor div{
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.sor h2{
+    font-family: "Outfit";
+    color: hsl(332, 51%, 32%);
+    padding-left: 15px;
+}
+
+.sor ul li::marker{
+    color: hsl(332, 51%, 32%);
+    font-size: 16px;
+}
+
+.sor li{
+    line-height: 35px;
+    padding-left: 25px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(-n+3){
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: hsl(30, 18%, 87%);
+}
+
+th{
+    font-family: "Outfit";
+    text-align: left;
+    font-weight: normal;
+    color: hsl(30, 10%, 34%);
+    width: 50%;
+    padding:10px 10px 10px 30px;
+    
+}
+
+td{
+    font-family: "Outfit";
+    text-align: left;
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}

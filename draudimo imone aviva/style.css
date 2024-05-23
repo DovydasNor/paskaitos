@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  header{
+    background-color: black;
+    height: max-content;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .logo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .logo img{
+    width: 150px;
+  }
+
+  h1{
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 0%;
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #d6b731;
+    height: 50px;
+  }
+
+ ul{
+    margin: 0;
+  }
+
+  nav li{
+    display: inline;
+    margin-right: 15px;
+  }
+
+  nav li a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+  }
+  
+  .content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .down a{
+    background-color: red;
+    color: white;
+    width: fit-content;
+    padding: 5px 30px;
+    border-radius: 10px;
+  }
+
+  .table-container{
+    background-color: #021749;
+    color:white;
+    padding:10px;
+    margin: 10px 0px;
+  }
+
+  table{
+    margin:auto;
+    border-collapse: collapse;
+    border: 2px solid red;
+    width: 70%;
+  }
+
+  caption{
+    text-align: left;
+  }
+
+  td, th{
+    border: 2px solid red;
+  }
+
+  td{
+    text-align: right;
+  }
+
+  tbody tr > th, td{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  tbody tr > th{
+    font-weight: normal;
+  }
+
+  .contacts{
+    margin-left: 15%;
+  }
+
+  .up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer p{
+    text-align: center;
+    background-color: #d6b731;
+    margin-bottom: 0;
+    padding:10px 0px;
+  }
+
+
+

@@ -1,0 +1,64 @@
+body{
+    padding: 0px 10px 0px 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+header img{
+    max-width: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+}
+
+header{
+    text-align: center;
+}
+
+header li{
+    display:inline;
+    margin-right:20px;
+    color: white;
+}
+
+header ul{
+    background-color: green;
+    height: 50px;
+    align-content: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+h2{
+    background-color: green;
+    font-size: 50px;
+    color: white;
+}
+
+main img{
+    display:block;
+    width: 100%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+
+#contacts h2{
+    margin-top: 0;
+}
+
+#about{
+    padding: 20px;
+    background-color: rgb(199, 199, 199);
+}
+
+#contacts{
+    padding: 20px;
+   background-color:  rgb(215, 255, 215);
+}
+

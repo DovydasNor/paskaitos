@@ -1,0 +1,123 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body{
+  font-family: "Roboto";
+  background-color: whitesmoke;
+}
+
+h1{
+  color: #ddd;
+  margin-top: 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper aside{
+  position: fixed;
+  background-color: #24282c;
+  height: 100%;
+  width: 250px;
+  padding: 15px;
+}
+
+aside a{
+  color: #ddd;
+  font-weight: 500;
+}
+
+li::marker{
+  color: red;
+}
+
+aside ul:nth-child(n+3){
+  list-style: none;
+  line-height: 35px;
+  padding-bottom: 20px;
+}
+
+ul{
+  border-bottom: 1px solid black;
+}
+
+ul ul {
+  border-style: none;
+  padding-bottom: 20px;
+}
+
+ul ul li{
+  font-weight: 100;
+  line-height: 25px;
+}
+
+header{
+  margin-left: 250px;
+  padding-left: 10px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  border-bottom: 1px solid #bebebe;
+}
+
+.right{
+  align-content: center;
+  margin-left:59%;
+}
+
+.right a{
+  color: #bebebe;
+}
+
+.right a:first-child{
+  color:#279ceb;
+}
+
+.right a:nth-child(-n+2){
+  margin-right: 10px;
+}
+
+
+.left{
+  align-content: center;
+  width: fit-content;
+}
+
+.left p{
+  text-transform: uppercase;
+}
+
+.left span{
+  color: #bebebe;
+  margin-left: 5px;
+}
+
+.list{
+  border-style: none;
+  margin-left: 250px;
+  list-style: none;
+  line-height: 35px;
+}
+
+h3{
+  margin: 0%;
+}
+
+main p{
+  color:#bebebe;
+  margin: 0%;
+}
+
+.list li:nth-child(-n+2){
+  margin-bottom:30px;
+}

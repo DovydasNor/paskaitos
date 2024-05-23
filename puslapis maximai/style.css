@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(222 217 217)
+}
+
+body p{
+    text-align: center;
+}
+
+header{
+    max-width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 60px 20px 60px;
+    margin: 5px auto;
+    box-shadow: 5px 3px 5px rgb(165, 165, 165);
+}
+
+header li{
+    display: inline;
+    margin-right: 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    max-width: 30%;
+}
+.foto1{
+    max-width: 100%
+}
+
+#apie-mus{
+    max-width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 60px 20px 60px;
+    margin: 10px auto;
+}
+
+h2{
+    text-align: center;
+}
+
+#produktai{
+    max-width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 60px 20px 60px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#produktai img{
+    max-width: 20%;
+}
+
+footer{
+    max-width: 60%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 60px 20px 60px;
+    margin: 10px auto;
+    box-shadow: 5px 3px 5px rgb(165, 165, 165);
+}
+
+div{
+    text-align: center;
+}
+
+#apie-mus p{
+    text-align: justify;
+}
+
+section{
+    box-shadow: 5px 3px 5px rgb(165, 165, 165);
+}

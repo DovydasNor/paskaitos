@@ -1,0 +1,70 @@
+body{
+    background-color: hsl(47, 88%, 63%);
+    font-family:"Figtree";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    margin:auto;
+    background-color:  hsl(0, 0%, 100%);
+    width:min-content;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 0px 0px;
+    padding: 20px;
+}
+
+main img{
+    border-radius: 10px;
+    text-align: center;
+}
+
+.learning{
+    border-radius: 5px;
+    background-color: hsl(47, 88%, 63%);
+    font-weight: 800;
+    padding: 6px 15px 6px 15px;
+    width: max-content;
+}
+
+.date{
+    font-weight: 500;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 150%;
+}
+
+h1:hover{
+    color: hsl(47, 88%, 63%);
+}
+
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 7%)
+}
+
+.paragraph{
+    color: hsl(0, 0%, 50%);
+    line-height: 25px;
+}
+
+#greg{
+    display: flex;
+    align-items: center;
+}
+
+#greg img{
+    float: left;
+    width: 10%;
+}
+
+#greg p{
+    font-weight: 800;
+    margin-left: 10px;
+}
+

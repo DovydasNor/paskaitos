@@ -1,0 +1,148 @@
+/*HEADER*/
+header{
+    margin: 0px 0px 30px 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: rgba(245, 245, 245, 0.514);
+    backdrop-filter: blur(5px);
+    box-shadow: 3px 3px 3px 3px rgba(119, 119, 119, 0.37);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.konteineris-logo{
+    display: flex;
+    flex-direction: row;
+    
+}
+.konteineris-logo h1{
+    text-align: center;
+    margin:0;
+}
+
+nav{
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+    
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 20px 0px;
+    box-shadow: 3px 3px 3px 3px rgba(119, 119, 119, 0.37);
+}
+/*HEADER*/
+
+/*BODY*/
+body{
+    font-family: Teko;
+    background-color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+hr{
+    border-top: 1px solid rgba(145, 158, 171, 0.16);
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    font-size: 19px;
+}
+
+img{
+    box-shadow: 3px 3px 3px 3px rgba(119, 119, 119, 0.37);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.darbas-p{
+    color: black;
+    font-size: 20px;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 20px 0px;
+    box-shadow: 3px 3px 3px 3px rgba(119, 119, 119, 0.37);
+}
+
+.konteineris-k {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.konteineris-d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.marginL{
+    margin-left: 5px;
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.marginR{
+    margin-right: 5px;
+     border-radius: 50% 20% / 10% 40%;
+}
+/*BODY*/
+
+/*FOOTER*/
+footer{
+    margin: 30px 0px 0px 0px;
+    background-color: rgba(145, 158, 171, 0.16);
+    align-items: center;
+}
+footer svg{
+    padding: 10px;
+    color:black;
+}
+
+footer ul{
+    margin: 0;
+}
+
+footer li{
+    display: inline;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*FOOTER*/
