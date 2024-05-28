@@ -1,0 +1,105 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:hsl(180, 25%, 25%);
+    padding: 20px;
+    text-align: center;
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+  
+p span{
+    background-color: hsl(301, 77%, 73%);
+}
+    
+label span{
+    font-size: 13px;
+}
+    
+.box, .age-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+    
+.box > input{
+    width: 50%;
+    border: 3px ridge rgb(255, 0, 0);
+    border-left-color: rgb(239, 130, 238);
+}
+    
+.box input:focus{
+    outline: none;
+}
+    
+.age-box > input{
+    border: 3px ridge rgb(245, 93, 93);
+    border-left-color: rgb(239, 130, 238);
+    width: 50px;
+}
+
+input:invalid{
+    border-color: red;
+}
+  
+input:valid{
+    border-color: green;
+}
+    
+#id{
+    background-color: rgb(169, 169, 169);
+    border-color: rgba(0, 0, 0, 0.63)
+}
+
+#age:focus{
+    outline: none;
+    border: 3px ridge rgb(0, 255, 255);
+    border-left-color: rgb(217, 255, 0);
+}
+
+textarea:focus{
+    outline: none;
+}
+
+button{
+    width: fit-content;
+    border: 1px ridge rgba();
+    border-width: 3px;
+    background-color: rgba(0, 128, 1);
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(1, 65, 1);
+}
+
+:checked + label{
+    color: blue;
+}
