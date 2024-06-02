@@ -1,0 +1,260 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    background-color: rgb(248, 250, 252);
+}
+
+span{
+    color: rgb(100, 92, 255);
+}
+
+header{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 5px;
+}
+  
+.container {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrapper h1{
+    margin: 0;
+}
+
+.header-wrapper ul{
+    margin: 0px 10px 0px 0px;
+    padding: 0;
+}
+
+.header-wrapper li{
+    display: inline;
+}
+
+.header-wrapper li:nth-child(-n+2){
+    padding-right: 20px;
+}
+
+.header-wrapper a{
+    text-decoration: none;
+}
+
+svg{
+    width: 20px
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+.your-wrapper{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 5px;
+    padding: 30px;
+    width: 50%;
+}
+
+.your-wrapper h2{
+    text-align: center;
+}
+
+.your-wrapper p{
+    font-size: 10px;
+}
+
+.your-wrapper label{
+    color: rgb(147, 61, 68);
+    font-size: 10px;
+}
+.input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box input{
+    width: 75%;
+    border-width: 1px;
+    background-color: rgb(248, 250, 252);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.input-box input:focus{
+    outline-style: none;
+}
+
+.input-box button{
+    width: 25%;
+    background-color: rgb(100, 92, 255);
+    border:1px solid rgb(100, 92, 255);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.box2{
+    display: flex;
+    justify-content: center;
+}
+
+.box2 h2{
+    text-transform: capitalize;
+}
+
+.edit-tasks button{
+    cursor: pointer;
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.task-wrapper{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 5px;
+    padding: 15px 30px;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.task-wrapper h2{
+    margin: 0;
+}
+
+.task-wrapper a{
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.task-wrapper svg{
+    width: 15px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check{
+    display: flex;
+}
+
+.check svg{
+    margin-right: 20px;
+}
+
+.box3{
+    margin-bottom: 30px;
+}
+
+.box3 h2{
+    text-decoration: line-through;
+}
+
+
+/* tasks.html */
+.tasks-edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ width: 50%;
+}
+
+.editTasks-wrapper{
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    gap: 10px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.editTasks-wrapper h2{
+    text-align: center;
+}
+
+.editTasks-wrapper label{
+    margin-right: 50px;
+}
+
+.ID input{
+    border-style: none;
+    outline-style: none;
+}
+
+.name input{
+    border-width: 1px;
+    background-color: rgb(248, 250, 252);
+    border-color: rgb(226, 232, 240);
+    border-radius: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    outline-style: none;
+}
+
+.name input::placeholder{
+    color: black;
+    text-align: left;
+}
+
+.completed input{
+    margin-left: 100px;
+}
+
+.button-edit button{
+    width:100%;
+    background-color: rgb(100, 92, 255);
+    color: rgb(255, 255, 255);
+    border-style: none;
+    border-radius: 2px;
+}
+
+.editTasks-wrapper p{
+    text-align: center;
+    color: rgb(147, 61, 68);
+    font-size: 10px;
+}
+
+.box4 a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
