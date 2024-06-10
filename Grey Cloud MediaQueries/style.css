@@ -1,0 +1,150 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+    font-family: "Roboto";
+}
+  
+.container {
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+header img{
+    width: 100px;
+}
+
+.name{
+    text-transform: capitalize;
+}
+
+/* NavBar */
+
+nav{
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(151, 151, 151);
+}
+
+/* MAIN */
+
+.wrapper{
+    display: flex;
+    gap: 15px;
+}
+
+main{
+    display: flex;
+    width: 70%;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+}
+
+section{
+    background-color: white;
+}
+
+.small-login{
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.small-help{
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.big{
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* FOOTER */
+
+.copyright{
+    text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 491px){
+
+    nav{
+        padding: 0px;
+    }
+
+    ul{
+        display: inline;
+        padding: 0%;
+    }
+
+    li{
+        padding: 10px;
+        margin: 0%;
+        border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    li:last-child{
+        border-style: none;
+    }
+
+    a{
+        text-decoration: underline;
+        color: rgb(16, 158, 201);
+    }
+
+    .small-help{
+        display: none;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside{
+        width: 100%;
+    }
+
+    main{
+        width: 100%;
+    }
+}
