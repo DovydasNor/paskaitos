@@ -148,3 +148,9 @@ section{
         width: 100%;
     }
 }
+
+@media (max-width: 321px){
+    h1{
+        font-size: 30px;
+    }
+}
