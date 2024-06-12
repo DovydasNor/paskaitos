@@ -8,6 +8,15 @@ body {
     font-family: "Roboto", Arial, sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    padding: 0 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .date{
     font-size: 10px;
     font-weight: 300;
@@ -19,15 +28,6 @@ body {
     font-weight: 500;
 }
   
-.container {
-    display: flex;
-    justify-content: center;
-    max-width: 1300px;
-    padding: 0 40px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .main{
     width: 55%;
     padding-right: 30px;
@@ -45,7 +45,7 @@ body {
     color: black;
 }
 
-.big-box{
+.big2-box{
     background-color: white;
 }
 
@@ -59,15 +59,11 @@ body {
 }
 
 
-.big img{
-    width: 100%;
-}
-
-
 .big2 img{
     width: 100%;
     height: 179px;
     object-fit: cover;
+    object-position: center;
 }
 
 .small-box-link{
@@ -273,3 +269,92 @@ button img{
     font-weight: 300;
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 978px){
+    
+.big-wrapper {
+    flex-direction: column;
+    width: auto; 
+}
+
+a.big-link {
+    width: auto;
+}
+
+
+aside {
+    width: 30%;
+}
+
+
+.small-video {
+    width: 100%;
+}
+
+
+.irasai-wrapper {
+    padding: 30px 0px;
+}
+
+}
+
+@media (max-width:750px){
+    .small-wrapper {
+        flex-direction: column;
+    }
+    
+    a.small-box-link {
+        width: auto;
+    }
+    
+    .big-wrapper {
+        width: 100%;
+    }
+    
+    aside {
+        width: 60%;
+    }
+    
+    .big-wrapper {
+        width: auto;
+    }
+}
+
+@media (max-width:550px){
+    .container {
+        flex-direction: column;
+    }
+    
+    section.main {
+        width: auto;
+    }
+    
+    .player-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .player {
+        width: calc((100% - 20px) / 2);
+    }
+    
+    aside {
+        width: auto;
+    }
+    
+    .player-wrapper {
+        gap: 20px;
+    }
+}
+
+@media(max-width:450px){
+    .player-wrapper {
+        gap: unset;
+        display: block;
+    }
+    
+    .player {
+        width: auto;
+    }
+}
