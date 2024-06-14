@@ -1,0 +1,414 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+h4{
+    text-transform: uppercase;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+h5{
+    text-transform: capitalize;
+    font-size: 15px;
+    margin: unset;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+  
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER */
+
+.logo-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.title{
+    text-transform: capitalize;
+    font-size: 30px;
+    margin: unset;
+    margin-left: 5px;
+}
+
+.blue-text{
+    color: rgb(100, 92, 255);
+}
+
+svg{
+    vertical-align: middle;
+    margin-right: 20px;
+    width: 15px;
+}
+
+ svg:last-child{
+    margin-right: unset;
+}
+
+.header-nav{
+    display: none;
+    color: black;
+}
+
+.header-nav-links{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    color: black;
+}
+
+/* MAIN */
+
+.continue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(100, 92, 255);
+    padding: 200px 30px;
+}
+
+.ex-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin: 0px 0px 10px;
+}
+
+.main-titles{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-text{
+    margin: unset;
+    font-size: 9px;
+    line-height: 18px;
+}
+
+.link{
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(100, 92, 255);
+    font-size: 10px;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
+.about{
+    width: 90%;
+    margin: 50px auto;
+}
+
+
+.img{
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+
+.link-read{
+    text-transform: capitalize;
+    font-size: 10px;
+    font-weight: 800;
+    color: rgb(100, 92, 255);
+}
+
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    margin: 0 auto;
+    padding: 0px 10px 60px;
+    width: 90%;
+    background-color: rgb(248, 251, 252);
+}
+
+.services-title-box{
+    grid-column-end: span 2;
+}
+.services-title{
+    margin: 30px 10px;
+}
+
+.services-svg{
+    margin: unset;
+    padding: 5px;
+    width: 20%;
+    background-color: rgb(100, 92, 255);
+}
+
+.services-box{
+    text-align: center;
+}
+
+.featured{
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.cards-container{
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.date{
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(100, 92, 255);
+    padding: 0px 2px;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+
+
+.tours-cards{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
+.featured-content-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 0px 10px 5px;
+    
+}
+
+.featured-content-box svg{
+    width:10px;
+    margin: unset;
+}
+
+.country-name{
+    display: flex;
+}
+
+.link-read-center{
+    text-align: center;
+}
+
+
+.gallery{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.gallery-title{
+    background-color: rgb(247, 250, 251);
+}
+
+.img-box-blue{
+    background-color: rgb(100, 92, 255);
+}
+
+.subscription{
+    display: flex;
+    align-items: center;
+    background-color: rgb(100, 92, 255);
+    color: white;
+    padding: 10px 10px 30px;
+}
+
+.subscription-content{
+    width: 60%
+}
+
+.subscription-input{
+    display: flex;
+    width: 40%;
+    /* flex-direction: column; */
+    
+}
+
+
+.button{
+    width: 40%;
+    font-size: 8px;
+    border-style: none;
+}
+
+.email{
+    width: 60%;
+    padding: 2px 8px;
+    border-style: none;
+}
+
+.email::placeholder{
+    color: black;
+    font-size: 8px;
+}
+
+/* FOOTER */
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(34, 34, 34);
+}
+
+.nav{
+    margin-bottom: 30px;
+}
+
+.nav-links{
+    text-transform: capitalize;
+    font-size: 13px;
+    margin-right: 5px;
+    color: white;
+}
+
+.copyright{
+    margin-top: 30px;
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media(min-width:749px){
+
+    .logo-wrapper{
+        justify-content: space-around;
+    }
+
+    .header-nav{
+        display: block;
+    }
+
+    .continue{
+        background: linear-gradient(rgba(74, 63, 218, 0.7), rgba(0, 0, 0, 0.7)),
+        url("https://images.unsplash.com/photo-1504280317859-9c6cce36bca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format")
+          center/cover no-repeat;
+    }
+
+    .image-content {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .img-box-border{
+        border: 5px solid rgb(100, 92, 255);
+        border-radius: 3px;
+    }
+
+    .img-realitive{
+        display: block;
+        position:relative;
+        margin-left: 12px;
+        margin-top: 12px;
+        margin-bottom: -20px;
+    }
+
+    .services{
+        grid-template-columns: 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+    }
+
+    .services-title-box {
+    grid-column-end: span 3;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 100px;
+        align-items: center;
+    }
+    
+    .link-read-center {
+        grid-row: 3;
+        grid-column-end: 3;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+    
+    a.link-read-center {
+        grid-row: 3;
+        grid-column-end: 3;
+        /* align-items: center; */
+        /* vertical-align: middle; */
+    }
+
+    .gallery{
+        width: 100%;
+    }
+    
+    .gallery-title {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 80px 1fr 1fr;
+    }
+    
+    .main-titles {
+        grid-column-end: span 4;
+    }
+    
+    .subscription {
+        grid-column-end: span 4;
+    }
+
+    br{
+        display: none;
+    }
+
+    .paragraph-size {
+        text-transform: capitalize;
+        padding-left: 20px;
+        font-size: 15px;
+    }
+    
+    
+    .padding-title {
+        font-size: 35px;
+    }
+    
+    
+    .email {
+        width: 100%;
+    }
+}
+
+
+
+
+
