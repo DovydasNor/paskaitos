@@ -63,6 +63,13 @@ svg{
     margin-right: unset;
 }
 
+.svg-social:hover{
+    transition: .6s;
+    width: 20px;
+    cursor: pointer;
+}
+
+
 .header-nav{
     display: none;
     color: black;
@@ -74,6 +81,10 @@ svg{
     font-weight: 700;
     margin-right: 10px;
     color: black;
+}
+
+.header-nav-links:hover, .nav-links:hover{
+    color: rgb(100, 92, 255);
 }
 
 /* MAIN */
@@ -124,6 +135,12 @@ svg{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
 
+.link:hover{
+    transition: .8s;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .about{
     width: 90%;
     margin: 50px auto;
@@ -149,6 +166,7 @@ svg{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
+    gap: 10px;
     margin: 0 auto;
     padding: 0px 10px 60px;
     width: 90%;
@@ -252,8 +270,6 @@ svg{
 .subscription-input{
     display: flex;
     width: 40%;
-    /* flex-direction: column; */
-    
 }
 
 
@@ -261,12 +277,14 @@ svg{
     width: 40%;
     font-size: 8px;
     border-style: none;
+    cursor: pointer;
 }
 
 .email{
     width: 60%;
     padding: 2px 8px;
     border-style: none;
+    outline-style: none;
 }
 
 .email::placeholder{
@@ -387,19 +405,20 @@ svg{
         grid-column-end: span 4;
     }
 
-    br{
+    .subscription-br{
         display: none;
     }
 
     .paragraph-size {
         text-transform: capitalize;
-        padding-left: 20px;
+        padding-left: 50px;
         font-size: 15px;
     }
     
     
     .padding-title {
         font-size: 35px;
+        margin-bottom: 20px;
     }
     
     
