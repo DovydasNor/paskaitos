@@ -82,7 +82,7 @@ header{
     text-align: center;
     width: 60%;
     text-decoration: none;
-    color:white;
+    color: #0e0000;
     background-color: hsl(322, 100%, 66%);
     border-radius: 30px;
     padding-top: 10px;
@@ -170,7 +170,7 @@ main{
     font-family: "Open Sans";
     font-weight: 400;
     font-size: 14px;
-    color: hsl(208, 11%, 55%);
+    color: hsl(208deg 100% 30.55%);
 }
 
 /* FOOTER */
@@ -216,7 +216,7 @@ footer{
     text-align: center;
     width: 70%;
     text-decoration: none;
-    color:white;
+    color: #0e0000;
     background-color: hsl(322, 100%, 66%);
     border-radius: 30px;
     padding-top: 10px;
