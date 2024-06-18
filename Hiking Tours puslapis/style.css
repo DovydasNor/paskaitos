@@ -63,16 +63,26 @@ svg{
     margin-right: unset;
 }
 
-.svg-social:hover{
+.svg-social{
     transition: .6s;
+}
+
+.svg-social:hover{
+    
     width: 20px;
     cursor: pointer;
+    animation-name: tirim-pirim;
+    animation-duration: 2s;
 }
 
 
 .header-nav{
     display: none;
     color: black;
+}
+
+.header-nav-links:hover{
+    color: rgb(100, 92, 255);
 }
 
 .header-nav-links{
@@ -83,9 +93,6 @@ svg{
     color: black;
 }
 
-.header-nav-links:hover, .nav-links:hover{
-    color: rgb(100, 92, 255);
-}
 
 /* MAIN */
 
@@ -133,10 +140,12 @@ svg{
     margin-top: 20px;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+    transition: .8s;
+    transition-property: padding-left, padding-right;
+    
 }
 
 .link:hover{
-    transition: .8s;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -302,15 +311,21 @@ svg{
     background-color: rgb(34, 34, 34);
 }
 
-.nav{
+.footer-nav{
     margin-bottom: 30px;
 }
+
+
 
 .nav-links{
     text-transform: capitalize;
     font-size: 13px;
     margin-right: 5px;
     color: white;
+}
+
+.nav-links:hover{
+    color: rgb(100, 92, 255);
 }
 
 .copyright{
@@ -428,6 +443,18 @@ svg{
 }
 
 
+.services-svg:hover{
+    animation: infinite;
+    animation-name: tirim-pirim;
+    animation-duration: 1s;
+}
 
+@keyframes tirim-pirim{
+    50%{filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}
+}
 
+/* .services-svg:hover{
+    transform: rotate(360deg) scale(1.1);
+    transition: 1.5s;
+} */
 
