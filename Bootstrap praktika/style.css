@@ -1,0 +1,16 @@
+.header-harlis{
+    height: 400px;
+}
+
+.main-harlis{
+    height:250px
+}
+
+.button-circle{
+    border-radius: 50%;
+    height: 80px;
+    padding: 15px;
+    position: fixed;
+    right:220px;
+    top:690px
+}
