@@ -1,0 +1,16 @@
+.carousel-item img{
+    object-fit: cover;
+    height: 350px;
+}
+
+.card img{
+    object-fit: cover;
+    height: 300px;
+}
+
+.custom-button{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    padding: unset;
+}
