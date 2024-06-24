@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="bg-base">
+        <h1 class="text-white text-[25px]  pt-6 pl-40">Property List</h1>
+        <p class="text-white pb-6 pl-40">See all the house you want!</p>
+    </header>
+
+    <div class="w-4/5 m-auto flex flex-col justify-center">
+        <div>
+            <div>
+                <h2 class="my-3">Filter:</h2>
+            </div>
+            <div class="flex justify-between">
+                <div class="mb-7">
+                    <button class="mr-0.3 border-solid border border-gray-300 p-1 hover:rounded active:border-base active:text-base">Vilnius</button>
+                    <button class="mr-0.3 border-solid border border-gray-300 p-1 hover:rounded active:border-base active:text-base">Kaunas</button>
+                    <button class="mr-0.3 border-solid border border-gray-300 p-1 hover:rounded active:border-base active:text-base">Klaipėda</button>
+                </div>
+
+                <div>
+                    <button class="bg-base text-white p-2 rounded">Add Property +</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-4 w-4/5">
+            <a class="w-1/4 flex-grow" href="#">
+                <div class="max-w-sm bg-white shadow dark:bg-white h-full">
+                    <img class="object-cover h-40 w-full" src="images/download (1).jfif" alt="">
+                    <div class="p-5">
+                        <h5 class="text-2xl font-bold tracking-tight text-gray-900">€30,000</h5>
+                        <p class="mb-3 font-normal">Vilnius</p>
+                        <p class="mb-8 font-normal">Gražus namas prie upės. Penki kambariai ir t.t.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="w-1/4 flex-grow" href="#">
+                <div class="max-w-sm bg-white shadow dark:bg-white h-full">
+                    <img class="object-cover h-40 w-full" src="images/images.jfif" alt="">
+                    <div class="p-5">
+                        <h5 class="text-2xl font-bold tracking-tight text-gray-900">€55,000</h5>
+                        <p class="mb-3 font-normal">Vilnius</p>
+                        <p class="mb-8 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui numquam mollitia odit?</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="w-1/4 flex-grow" href="#">
+                <div class="max-w-sm bg-white shadow dark:bg-white h-full">
+                    <img class="object-cover h-40 w-full" src="images/download.jfif" alt="">
+                    <div class="p-5">
+                        <h5 class="text-2xl font-bold tracking-tight text-gray-900">€105,000</h5>
+                        <p class="mb-3 font-normal">Vilnius</p>
+                        <p class="mb-8 font-normal">Butas kaip butas... sėdi ir gyveni</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
