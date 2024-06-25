@@ -1,0 +1,50 @@
+main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px 40px 20px;
+    background-color: white;
+    color: rgb(97, 112, 120);
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+    h1{
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: 300;
+        margin: 0px 0px 30px 0px;
+    }
+
+    
+    .headings{
+        display: flex;
+        border-bottom: 1px solid rgb(227, 227, 227);
+
+        h2{
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .title{
+            font-size: 20px;
+            font-weight: 800;
+            margin-right: 20%;
+        }
+    }
+
+    .content{
+        display: flex;
+        border-bottom: 1px solid rgb(227, 227, 227);
+
+        .book-name{
+            font-size: 15px;
+            margin-right: 20%;
+        }
+
+        .author{
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+    }
+    
+}

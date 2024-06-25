@@ -1,0 +1,24 @@
+@use "./style-scss/base";
+@use "./style-scss/header";
+@use "./style-scss/main";
+@use "./style-scss/footer";
+
+// Responsive design
+
+// @media (min-width: 800px) {
+//     header{
+//         align-items: flex-end;
+//         padding-left: 160px;
+//         padding-right: 160px;
+//         padding-bottom: 0%;
+//     }
+
+//     .heading1, .heading2{
+//         padding-bottom: 20px;
+//         font-size: 15px;
+//     }
+
+//     main{
+//         width: 70%;
+//     }
+// }
