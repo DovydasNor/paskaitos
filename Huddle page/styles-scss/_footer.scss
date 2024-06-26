@@ -1,0 +1,213 @@
+@use "./responsive";
+@use "./variables";
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    background-color: variables.$footer-bg;
+    color: #ffffff;
+
+    .footer-wrapper{
+        width: 90%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            width:25%;
+            margin-left: 10px;
+            font-family: "Open Sans";
+            font-size: 11px;
+
+            img{
+                width: 100%;
+                padding-left: 10px;
+                margin-bottom: 20px;
+            }
+
+            ul{
+                padding: 0%;
+                padding-left: 30px;
+
+                li{
+                    margin-bottom: 20px;
+                    padding-left: 10px;
+                }
+
+                @include responsive.md{
+                    width: 70%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @include responsive.sm{
+                    width: 70%;
+                    margin: unset;
+                }
+                
+            }
+
+            @include responsive.lg{
+                width: 45%;
+            }
+
+            @include responsive.md{
+                width: auto;
+            }
+
+            .location{
+                list-style: url(images/icon-location.svg);
+            }
+            
+            .phone{
+                list-style: url(images/icon-phone.svg);
+            }
+            
+            .email{
+                list-style: url(images/icon-email.svg);
+            }
+
+            @include responsive.sm{
+                width: auto;
+                align-items: flex-start;
+            }
+        }
+
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:25%;
+
+            li{
+                list-style-type: none;
+                padding-bottom: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-family: "Open Sans";
+                }
+            }
+
+            @include responsive.lg{
+                width: 50%;
+            }
+
+            @include responsive.sm{
+                width: auto;
+            }
+
+        }
+
+        .career{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:25%;
+
+            li{
+                list-style-type: none;
+                padding-bottom: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-family: "Open Sans";
+                }
+            }
+
+            @include responsive.lg{
+                width: 45%;
+            }
+
+            @include responsive.sm{
+                width: auto;
+            }
+        }
+
+        .social{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 65px;
+            width:25%;
+
+            .svg-social{
+                width: 50%;
+
+                a{
+                    text-align: center;
+
+                    svg{
+                        width: 25%;
+                        fill: white;
+                        padding-right: 10px;
+
+                        @include responsive.md{
+                            width: 30%;
+                            margin-bottom: 20px;
+                        }
+
+                        @include responsive.sm{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                @include responsive.md{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .copyright{
+                display: flex;
+                justify-content: flex-start;
+                font-size: 10px;
+            }
+
+            @include responsive.lg{
+                width: 50%;
+                padding: unset;
+                align-items: center;
+            }
+
+            @include responsive.md{
+                width: auto;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @include responsive.sm{
+                width: auto;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        
+        @include responsive.lg{
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @include responsive.md{
+            align-items: center;
+        }
+
+        &:nth-child(n+2):nth-child(-n+3){
+            width: 25%;
+        }
+
+        @include responsive.sm{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    }
+}

@@ -1,0 +1,116 @@
+@use "./responsive";
+@use "./variables";
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 200px;
+    gap: 40px;
+
+    .box{
+        display: flex;
+        justify-content: center;
+
+        .content-wrapper-rew{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 85%;
+            padding: 20px 30px 30px 70px;
+
+            .img-end{
+                display: flex;
+                justify-content: flex-end;
+                width: 40%;
+
+                @include responsive.sm{
+                    width: 100%;
+                }
+            }
+
+            .main-img{
+                width: 100%;
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40%;
+
+                .main-heading{
+                    font-family: "Poppins";
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+
+                .main-content{
+                    font-family: "Open Sans";
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: variables.$main-content;
+                }
+
+                @include responsive.sm{
+                    width: 100%;
+                }
+            }
+
+            @include responsive.sm{
+                flex-direction: column;
+            }
+        }
+
+        .content-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 85%;
+            padding: 20px 30px 30px 70px;
+
+            .img{
+                width: 40%;
+                display: flex;
+                justify-content: flex-start;
+                
+                @include responsive.sm{
+                    width: 100%;
+                }
+            }
+
+            .main-img{
+                width: 100%;
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40%;
+
+                .main-heading{
+                    font-family: "Poppins";
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+
+                .main-content{
+                    font-family: "Open Sans";
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: variables.$main-content;
+                }
+            }
+
+            @include responsive.sm{
+                flex-direction: column;
+            }
+        }
+    }
+    
+}

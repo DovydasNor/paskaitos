@@ -1,0 +1,135 @@
+@use "./responsive";
+@use "./variables";
+
+header{
+    background-color: rgb(237, 251, 254);
+    background-image: url(/images/bg-hero-desktop.svg);
+    background-size: cover;
+    padding-bottom: 40px;
+    margin-bottom: 100px;
+
+    .logo-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        .logo{
+            width: 100px;
+        }
+
+        .try-it{
+            text-decoration: none;
+            color: black;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 10px;
+            background-color: white;
+            padding: 10px 40px;
+            border-radius: 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+
+    .heading-container{
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+
+        .heading-content-box{
+            display: flex;
+            flex-direction: column;
+            width: 34%;
+            padding-left: 50px;
+
+            .build-the{
+                font-family: "Poppins";
+                line-height: 35px;
+                font-size: 25px;
+                font-weight: 600;
+                margin: 0%;
+
+                @include responsive.xl{
+                    font-size: 20px;
+                }
+
+                @include responsive.m{
+                    font-size: 30px;
+                }
+            }
+
+            .huddle-text{
+                font-family: "Open Sans";
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 15px;
+
+                @include responsive.m{
+                    font-size: 15px;
+                }
+            }
+
+            .get-started{
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 10px;
+                text-align: center;
+                width: 60%;
+                text-decoration: none;
+                color: variables.$getStarted-button-text;
+                background-color: variables.$getStarted-button;
+                border-radius: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+
+                @include responsive.m{
+                    width: 90%;
+                    font-size: 15px;
+                }
+            }
+
+            @include responsive.m{
+                width: 80%;
+                padding:unset;
+                justify-content: center;
+                align-items: center;
+            }
+            
+        }
+
+        .heading-img-box{
+            display: flex;
+            justify-content: flex-end;
+            width: 66%;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            .mockups{
+                width: 100%;
+            }
+
+            @include responsive.xl{
+                width: 45%;
+            }
+
+            @include responsive.m{
+                align-items: center;
+                padding: unset;
+                justify-content: center;
+                width: 75%;
+                margin-top: 30px;
+            }
+        }
+
+        @include responsive.xl{
+            justify-content: center;
+        }
+
+        @include responsive.m{
+            flex-direction: column;
+        }
+  
+    }
+    
+}
