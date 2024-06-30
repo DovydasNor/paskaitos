@@ -1,0 +1,20 @@
+@use "./variables";
+
+// *, *::before, *::after {
+//     box-sizing: border-box;
+// }
+  
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Lato";
+    // background-color: variables.$body-bg;
+}
+
+.container{
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}

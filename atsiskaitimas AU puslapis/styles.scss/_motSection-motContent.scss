@@ -1,0 +1,67 @@
+@use "./variables";
+@use "./responsive";
+
+.mot{
+    display: flex;
+    justify-content:right;
+    gap: 109px;
+    background: rgb(239,239,236);
+    background: linear-gradient(180deg, rgba(239,239,236,1) 0%, rgba(239,239,236,1) 100%);
+
+    @include responsive.md{
+        flex-direction: column;
+    }
+
+    .mot-content{
+        width: 46%;
+
+
+        .mot-heading{
+            background: rgb(249,231,219);
+            background: linear-gradient(0deg, rgba(249,231,219,1) 15%, rgba(249,231,219,1) 100%);
+            padding-right: 290px;
+
+            h2{
+                padding-left: 140px;
+
+                @include responsive.md{
+                    padding: 20px;
+                    text-wrap: nowrap;
+                }
+
+            }
+
+            h3{
+                padding-left: 140px;
+
+                @include responsive.md{
+                    padding-left: 20px;
+                }
+
+            }
+        }
+
+        p{
+            padding-left: 140px;
+
+            @include responsive.md{
+                padding: 20px;
+                font-size: 10px;
+            }
+
+        }
+
+        a{
+            padding-left: 140px;
+            float: inline-end;
+            width: 80%;
+
+            @include responsive.md{
+                width: 95%;
+            }
+        }
+
+    }
+
+    
+}

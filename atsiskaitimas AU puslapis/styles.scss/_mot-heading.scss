@@ -1,0 +1,48 @@
+@use "./variables";
+@use "./responsive";
+
+
+.mot-content{
+
+    @include responsive.md{
+        width: 100%;
+    }
+    p{
+        margin-top: 40px;
+        color: variables.$text-gray2;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+         margin-bottom: 40px;
+    }
+
+    .mot-heading{
+
+
+        h2{
+            margin-top: 17px;
+            color: variables.$text-green;
+            font-weight: 500;
+            font-size: 41px;
+            text-transform: uppercase;
+
+            @include responsive.md{
+                font-size: 20px;
+            }
+        }
+
+        h3{
+            color: variables.$h3-color;
+            font-weight: 500;
+            font-size: 24px;
+            text-transform: uppercase;
+            
+            
+            @include responsive.md{
+                font-size: 13px;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,73 @@
+@use "./variables";
+@use "./responsive";
+
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 40px;
+    padding-right: 177px;
+
+    
+    @include responsive.lg{
+        margin-left: auto;
+        margin-right: auto;
+        padding: unset;
+    }
+
+    a{
+        text-decoration: none;
+
+        .services-content{
+
+            padding: 40px 27px 45px 40px;
+            
+
+
+            &:hover{
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                box-shadow: 0px 5.87px 31.33px 0px #9B94942B;
+                transition: 0.6s ease;
+
+                img{
+                    box-shadow: none;
+                    transition: 0.6s;
+                    color: white;
+                }
+
+                
+            }
+
+            img{
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                padding: 12px;
+                box-shadow: 0px 5.87px 31.33px 0px #9B94942B;
+            }
+
+            h4{
+                font-size: 24px;
+                font-weight: 500;
+                color: variables.$text-gray1;
+                text-transform: uppercase;
+                margin: unset;
+                margin-top: 16px;
+                margin-bottom: 6px;
+
+                span{
+                    font-size: 36px;
+                }
+            }
+
+            p{
+                font-size: 13px;
+                font-weight: 400;
+                letter-spacing: 4%;
+                color: variables.$text-gray1;
+            }
+
+        }
+    }
+}
+ 

@@ -1,0 +1,98 @@
+@use "./variables";
+@use "./responsive";
+
+header{
+    background: rgb(245,232,224);
+    background: radial-gradient(circle, rgba(245,232,224,1) 20%, rgba(239,239,236,1) 50%);
+    padding: 55px 140px 61px 140px;
+
+    @include responsive.md{
+        padding: 40px 32px 80px;
+    }
+
+
+    .nav-section{
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive.md{
+            padding: 40px 32px 80px;
+        }
+
+        .logo-box{
+            display: flex;
+            align-items: center;
+
+            .logo{
+                margin-right: 12px;
+            }
+
+            .logo-text{
+                Width: 128.75px;
+                Height: 14.88px;
+            }
+        }
+
+        .nav{
+            display: flex;
+            align-items: center;
+
+            .icon{
+                display:none;
+
+                @include responsive.md{
+                    display: block;
+                }
+            }
+
+
+
+            ul{
+                display: flex;
+
+                @include responsive.md{
+                    display: none;
+                }
+
+                li{
+                    list-style: none;
+                    margin-right: 48px;
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    font-weight: 500;
+
+                    a{
+                        color: variables.$text-gray1;
+
+                        &:hover{
+                            color: variables.$text-green;
+                            font-weight: 700;
+                        }
+                    }
+
+                }
+            }
+
+            .reg-button{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 500;
+                color: variables.$buttons-text;
+                background: variables.$buttons-bg;
+                background: variables.$buttons-linear;
+                padding: 10px 15px;
+                border-radius: 3px;
+
+                .initial-letter{
+                    font-size: 18px;
+                }
+
+                @include responsive.md{
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
