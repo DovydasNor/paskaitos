@@ -14,43 +14,43 @@ if(password.includes('#') === false){
 }
 
 // AMŽIUS:
-//  let schoolKidAge = prompt('Įveskite mokinio amžių')
+let schoolKidAge = prompt('Įveskite mokinio amžių')
 
-// if(isNaN(schoolKidAge) === true){
-//     console.log('Netinkamai nurodytas amžius, amžius privalo būti skaičius.')
-// }else if(schoolKidAge < 0){
-//     console.log('Įvestas amžius yra per mažas.')
-// }
-// else if(schoolKidAge > 120){
-//     console.log('Įvestas amžius yra per didelis.')
-// }
-// else if(schoolKidAge < 6){
-//     console.log('Iki 6 metų į mokyklą neina.')
-// }
-// else if(schoolKidAge === 6){
-//     console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.')
-// }
-// else if(schoolKidAge > 6 && schoolKidAge < 10){
-//     console.log('7-10 metų eina į pradinę klasę.')
-// }
-// else if(schoolKidAge === 10){
-//     console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas')
-// }
-// else if(schoolKidAge > 10 && schoolKidAge < 14){
-//     console.log('11-14 metų eina į pagrindinę.')
-// }
-// else if(schoolKidAge === 14){
-//     console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.')
-// }
-// else if(schoolKidAge > 14 && schoolKidAge < 18){
-//     console.log('15-18 metų eina į gimnaziją.')
-// }
-// else if(schoolKidAge === 18){
-//     console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.')
-// }
-// else{
-//     console.log('19+ mokyklą baigė.')
-// }
+if(isNaN(schoolKidAge) === true){
+    console.log('Netinkamai nurodytas amžius, amžius privalo būti skaičius.')
+}else if(schoolKidAge < 0){
+    console.log('Įvestas amžius yra per mažas.')
+}
+else if(schoolKidAge > 120){
+    console.log('Įvestas amžius yra per didelis.')
+}
+else if(schoolKidAge < 6){
+    console.log('Iki 6 metų į mokyklą neina.')
+}
+else if(schoolKidAge === 6){
+    console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.')
+}
+else if(schoolKidAge > 6 && schoolKidAge < 10){
+    console.log('7-10 metų eina į pradinę klasę.')
+}
+else if(schoolKidAge === 10){
+    console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas')
+}
+else if(schoolKidAge > 10 && schoolKidAge < 14){
+    console.log('11-14 metų eina į pagrindinę.')
+}
+else if(schoolKidAge === 14){
+    console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.')
+}
+else if(schoolKidAge > 14 && schoolKidAge < 18){
+    console.log('15-18 metų eina į gimnaziją.')
+}
+else if(schoolKidAge === 18){
+    console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.')
+}
+else{
+    console.log('19+ mokyklą baigė.')
+}
 
 // GALVOSŪKIS:
 
