@@ -72,5 +72,60 @@ console.log(compareArrays([1, 2, 3], [1, 2, 3]))
 console.log(compareArrays([1, 2, 3], [1, 2, 4]))
 
 // Reverse string:
-let reverseStr = str => str.reverse()
-console.log(reverseStr(['Labas']))
+
+// METHOD 1
+function reverseStr (str){
+    let splitStr = str.split('')
+    let reversArr = splitStr.reverse()
+    let joinArr = reversArr.join('')
+    return joinArr
+}
+
+console.log(reverseStr('Labas'))
+
+// METHOD 1 ALTERNATIVE
+function reverseStr1 (str){
+    return str.split('').reverse().join('')
+}
+
+console.log(reverseStr1('Hello'))
+
+// METHOD 2
+function reverseStr2 (str){
+    let string = ''
+    for (let i = str.length - 1; i >= 0; i--){
+        string += str[i]
+    }
+    return string
+}
+console.log(reverseStr2('Dovydas'))
+
+// METHOD 3
+function reverseStr3 (str){
+    if(str === ''){
+        return ''
+    }
+    else{
+        return reverseStr3(str.substring(1)) + str.charAt(0)
+    }
+}
+
+console.log(reverseStr3('Ledai'))
+
+// Palindromas ???
+let arPalindoras = str => str.includes('Palindromas')
+console.log(arPalindoras(' asfasf Palindromas sdf'))
+
+// Pyramid
+let pyramid = (height) => {
+    for (let i = 1; i <= height; i++){
+        let line = ''
+        for (let j = 0; j < i; j++){
+            line += i
+        }
+        console.log(line)
+    }
+    
+}
+
+console.log(pyramid(4))
