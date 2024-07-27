@@ -3,7 +3,7 @@
 console.log(`Part 3`)
 
 // 3. Tęsiant darbą su ankstesniu masyvu atlikti šias užduotis naudojant filter metodą. Kiekvienai užduočiai sukurti naują kintamąjį, jame išsaugoti reikšmę, kurią grąžina filter metodas, ir šį kintamąjį išvesti į konsolę:
-let arr = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
+let arr = ['startt', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 55, 0, 33, 789, 6543, 1, 'trylika', 444, 321, 654, -1, 987, -333, -321, 'end']
 console.log(arr)
 
 // 3.1. Gauti tik teigiamus skaičius.
@@ -306,7 +306,7 @@ console.log(task357)
 // 3.58. Gauti tik tekstus (string), kurie turi raides e arba a.
 let task358 = arr.filter((array) =>{
     if (typeof array === 'string'){
-        let findEa = array.includes('e', 'a')
+        let findEa = array.includes('e') || array.includes('a')
         return findEa
     }
     return false
@@ -315,15 +315,139 @@ console.log('task358')
 console.log(task358)
 
 // 3.59. Gauti tik tekstus (string), kurie turi raides t ir i.
+let task359 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('t') || array.includes('i')
+        return findEa
+    }
+    return false
+} )
+console.log('task359')
+console.log(task359)
+
 // 3.60. Gauti tik tekstus (string), kurie turi raide t, bet neturi raidės k.
+let task360 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('t') && !array.includes('k')
+        return findEa
+    }
+    return false
+} )
+console.log('task360')
+console.log(task360)
+
 // 3.61. Gauti tik tekstus (string), kurie turi raide a, bet neturi raidės s.
+let task361 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('a') && !array.includes('s')
+        return findEa
+    }
+    return false
+} )
+console.log('task361')
+console.log(task361)
+
 // 3.62. Gauti tik tekstus (string), kurie turi daugiau nei vieną raidę t.
+let task362 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('t') > 1
+        return findEa
+    }
+    return false
+} )
+console.log('task362')
+console.log(task362)
+
+// Destitojo varijantas:
+let task3622 = arr.filter(item => {
+    if (isNaN(item)) {
+    let letterCount = 0
+
+        for (let i = 0; i < item.length; i++) {
+        let letter = item[i]
+
+        if (letter === 't') {
+            letterCount++
+        }
+
+        if (letterCount > 1) {
+        }
+        }
+
+        return letterCount > 1
+    }
+})
+console.log('task3622')
+console.log(task3622)
+
 // 3.63. Gauti tik tekstus (string), kurie turi raidžių junginį st.
+let task363 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('st')
+        return findEa
+    }
+    return false
+} )
+console.log('task363')
+console.log(task363)
+
 // 3.64. Gauti tik tekstus (string), kurie turi raidžių junginį nd.
+let task364 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('nd')
+        return findEa
+    }
+    return false
+} )
+console.log('task364')
+console.log(task364)
+
+
 // 3.65. Gauti tik tekstus (string), kurie neturi raidės s.
+let task365 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = !array.includes('s')
+        return findEa
+    }
+    return false
+} )
+console.log('task365')
+console.log(task365)
+
+
 // 3.66. Gauti tik tekstus (string), kurie neturi raidės t.
+let task366 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = !array.includes('t')
+        return findEa
+    }
+    return false
+} )
+console.log('task366')
+console.log(task366)
+
 // 3.67. Gauti tik tekstus (string), kurie neturi raidės r ir l.
+let task367 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = !array.includes('r') && !array.includes('l')
+        return findEa
+    }
+    return false
+} )
+console.log('task367')
+console.log(task367)
+
 // 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
+let task368 = arr.filter((array) =>{
+    if (typeof array === 'string'){
+        let findEa = array.includes('number')
+        return findEa
+    }
+    return false
+} )
+console.log('task368')
+console.log(task368)
+
 // 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
 // 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
 // 3.70. Gauti tik tekstus (string), kurie baigiasi raide d.
