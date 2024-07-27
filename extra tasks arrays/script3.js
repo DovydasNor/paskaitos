@@ -438,25 +438,66 @@ console.log('task367')
 console.log(task367)
 
 // 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
-let task368 = arr.filter((array) =>{
-    if (typeof array === 'string'){
-        let findEa = array.includes('number')
-        return findEa
-    }
-    return false
-} )
+let task368 = arr.filter((array) => isNaN(array) && !isNaN(array[0]))
 console.log('task368')
 console.log(task368)
 
 // 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
+let task369 = arr.filter((array) => isNaN(array) && array.startsWith('s'))
+console.log('task369')
+console.log(task369)
+
 // 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
-// 3.70. Gauti tik tekstus (string), kurie baigiasi raide d.
-// 3.71. Gauti tik tekstus (string), kurie baigiasi raide s.
-// 3.72. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
-// 3.73. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
-// 3.74. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
-// 3.75. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
-// 3.76. Gauti tik tekstus (string), kurių trečias simbolis yra a.
-// 3.77. Gauti tik tekstus (string), kurių ketvirtas simbolis yra l.
-// 3.78. Gauti tik tekstus (string), kurių penktas simbolis nėra t ir kurie turi daugiau simbolių nei 4.
-// 3.79. Gauti tik tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
+let task370 = arr.filter((array) => isNaN(array) && array.startsWith('o'))
+console.log('task370')
+console.log(task370)
+
+// 3.71. Gauti tik tekstus (string), kurie baigiasi raide d.
+let task371 = arr.filter((array) => isNaN(array) && array.endsWith('d'))
+console.log('task371')
+console.log(task371)
+
+// 3.72. Gauti tik tekstus (string), kurie baigiasi raide s.
+let task372 = arr.filter((array) => isNaN(array) && array.endsWith('s'))
+console.log('task372')
+console.log(task372)
+
+// 3.73. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
+let task373 = arr.filter((array) => isNaN(array) && array.includes('o') && array.length > 4)
+console.log('task373')
+console.log(task373)
+
+// 3.74. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
+let task374 = arr.filter((array) => isNaN(array) && array.includes('a') && array.length >= 5)
+console.log('task374')
+console.log(task374)
+
+// 3.75. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
+let task375 = arr.filter((array) => isNaN(array) && array.length % 2 === 0)
+console.log('task375')
+console.log(task375)
+
+// 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
+let task376 = arr.filter((array) => isNaN(array) && array.length % 2 !== 0 && array.includes('s'))
+console.log('task376')
+console.log(task376)
+
+// 3.77. Gauti tik tekstus (string), kurių trečias simbolis yra a.
+let task377 = arr.filter((array) => isNaN(array) && array[2] === 'a')
+console.log('task377')
+console.log(task377)
+
+// 3.78. Gauti tik tekstus (string), kurių ketvirtas simbolis yra l.
+let task378 = arr.filter((array) => isNaN(array) && array[3] === 'l')
+console.log('task378')
+console.log(task378)
+
+// 3.79. Gauti tik tekstus (string), kurių penktas simbolis nėra t ir kurie turi daugiau simbolių nei 4.
+let task379 = arr.filter((array) => isNaN(array) && array[4] !== 't' && array.length > 4)
+console.log('task379')
+console.log(task379)
+
+// 3.80. Gauti tik tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
+let task380 = arr.filter((array) => isNaN(array) && array[0] !== 'e' && array.length < 6 && isNaN(array[0]))
+console.log('task380')
+console.log(task380)
