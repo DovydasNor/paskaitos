@@ -6,25 +6,132 @@ let arr2 = ['start', 2, 3, 5, 11, 155, 888, '15x', 6789, -5564, 'obuolys', -51, 
 console.log(arr2)
 
 // 4.1. Tik skaičius (number tipo duomenis).
-for (let i = 0; i < arr2.length; i++) {
-    if (!isNaN(arr2[i])) {
-        let task41 = arr2.map((array) => !isNaN(array[i]))
-    }
-    console.log(task41)
+let arrNumb = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+        arrNumb.push(arr2[i])
+    } 
 }
 console.log('Task41')
+console.log(arrNumb)
+
+let arrNumbEach = []
+arr2.forEach((array) => {
+    if(!isNaN(array)){
+        arrNumbEach.push(array)
+    }
+})
+console.log(arrNumbEach)
 
 // 4.2. Tik tekstą (string tipo duomenis).
+let arrStr = []
+for (let i = 0; i < arr2.length; i++){
+    if(isNaN(arr2[i])){
+        arrStr.push(arr2[i])
+    } 
+}
+console.log('Task42')
+console.log(arrStr)
+
+let arrStrEach = []
+arr2.forEach((array) => {
+    if(isNaN(array)){
+        arrStrEach.push(array)
+    }
+})
+console.log(arrStrEach)
+
 // 4.3. Tik skaičius (number tipo duomenis) ir juos pakelti 4-tuoju laipsniu.
+let arrNumbExpo = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+    arrNumbExpo.push(arr2[i] ** 4)
+    } 
+}
+console.log('Task43')
+console.log(arrNumbExpo)
+
+let arrNumbExpoMap = arr2.map((array) =>  array ** 4).filter((array) => !isNaN(array))
+console.log(arrNumbExpoMap)
+
 // 4.4. Tik skaičius (number tipo duomenis) ir prie jų pridėti 55.
+let arrNumbAdd = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+    arrNumbAdd.push(arr2[i] + 55)
+    } 
+}
+console.log('Task44')
+console.log(arrNumbAdd)
+
+let arrNumbAddMap = arr2.map((array) =>  array + 55).filter((array) => !isNaN(array))
+console.log(arrNumbAddMap)
+
 // 4.5. Tik skaičius (number tipo duomenis) ir juos padalinti iš 2.
+let arrNumbDiv = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+    arrNumbDiv.push(arr2[i] / 2)
+    } 
+}
+console.log('Task45')
+console.log(arrNumbDiv)
+
+let arrNumbDivMap = arr2.map((array) =>  array / 2).filter((array) => !isNaN(array))
+console.log(arrNumbDivMap)
+
 // 4.6. Tik skaičius (number tipo duomenis) ir prieš juos pridėti teksta, tokiu formatu: "Number: 2".
+let arrNumbAddStr = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+    arrNumbAddStr.push('Number: ' + arr2[i])
+    } 
+}
+console.log('Task46')
+console.log(arrNumbAddStr)
+
+let newArrAdd = []
+let arrNumbAddStrEach = arr2.forEach((array) =>{
+    if(!isNaN(array)){
+        newArrAdd.push('Number : ' + array)
+    }
+})
+console.log(newArrAdd)
+
 // 4.7. Tik skaičius (number tipo duomenis) ir pridėti tekstą su jų pačių indeksais, pvz.:
 //   "Index: 0, Number: 2"
 //   "Index: 1, Number: 3"
 //   "Index: 2, Number: 5"
 //   Ir t.t.
+let arrNumbAddI = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+        arrNumbAddI.push(`Index: ${i}, Number : ${arr2[i]}`)
+    } 
+}
+console.log('Task47')
+console.log(arrNumbAddI)
+
+let newArrAddI = []
+let arrNumbAddIEach = arr2.forEach((array, index) =>{
+    if(!isNaN(array)){
+        newArrAddI.push(`Index: ${index}, Number : ${array}`)
+    } 
+})
+console.log(newArrAddI)
 // 4.8. Tik skaičius (number tipo duomenis) ir juos padauginti iš jų pačių indekso.
+let arrNumbMulti = []
+for (let i = 0; i < arr2.length; i++){
+    if(!isNaN(arr2[i])){
+        arrNumbMulti.push(arr2[i] * [i])
+    } 
+}
+console.log('Task48')
+console.log(arrNumbMulti)
+
+let arrNumbMultiMap = arr2.map((array, index) =>  array * index).filter((array) => !isNaN(array))
+console.log(arrNumbMultiMap)
+
 // 4.9. Tik skaičius (number tipo duomenis) ir juos padauginti iš ankstesnio nario, pvz.:
 //   - Pirmo skaičiaus dauginti nereikia.
 //   - Antrą skaičių dauginti iš pirmo.
