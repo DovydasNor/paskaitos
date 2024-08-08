@@ -61,7 +61,6 @@ const buttonPlus5 = createButton('+5')
 const buttonMinus5 = createButton('-5')
 const saveGrade = createButton('Įrašyti balą')
 const delAllGrades = createButton('Ištrinti visus balus')
-// const delGrade = createButton('x')
 const inputElement = createInput()
 const elementH4 = document.createElement('h4')
 elementH4.textContent = 'Balai:'
@@ -71,12 +70,17 @@ const elementUl = document.createElement('ul')
 const elementNumber = 5
 let elementCounter = elementNumber
 
-inputElement.value = elementCounter
+inputElement.max = 10
+inputElement.min = 1
 
 numbers.prepend(inputElement)
 numbers.append(elementH3, buttonPlus1, buttonPlus2, buttonPlus5, buttonReset, buttonMinus1, buttonMinus2, buttonMinus5, saveGrade, elementH4, delAllGrades, elementUl)
 checkData(0)
 
+inputElement.addEventListener('input', () =>{
+    counter = Number(input.value)
+    checkData(0)
+})
 buttonPlus1.addEventListener('click', () => checkData(1))
 buttonMinus1.addEventListener('click', () => checkData(-1))
 buttonPlus2.addEventListener('click', () => checkData(2))
@@ -94,8 +98,7 @@ saveGrade.addEventListener('click', () => {
     elementLi.textContent = elementH3.textContent
     elementLi.style.color = elementH3.style.color
     
-    const delGrade = document.createElement('button')
-    delGrade.textContent = 'x'
+    const delGrade = createButton ('x')
     delGrade.addEventListener('click', () =>{
         elementLi.remove()
     })
@@ -105,7 +108,9 @@ saveGrade.addEventListener('click', () => {
 })
 
 delAllGrades.addEventListener('click', () => {
-    elementUl.innerHTML = ''
+    const liItems = document.querySelectorAll('li')
+    liItems.forEach(liItems => liItems.remove())
+
 })
 
 function createButton (text = ''){
@@ -128,6 +133,7 @@ function createInput (){
 function checkData (num){
     elementCounter = elementCounter + num
     elementH3.textContent = elementCounter
+    inputElement.value = elementCounter
     disableButtons()
     colorChange()
 }
