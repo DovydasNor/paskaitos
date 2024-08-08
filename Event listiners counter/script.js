@@ -61,7 +61,7 @@ const buttonPlus5 = createButton('+5')
 const buttonMinus5 = createButton('-5')
 const saveGrade = createButton('Įrašyti balą')
 const delAllGrades = createButton('Ištrinti visus balus')
-const delGrade = createButton('x')
+// const delGrade = createButton('x')
 const inputElement = createInput()
 const elementH4 = document.createElement('h4')
 elementH4.textContent = 'Balai:'
@@ -87,19 +87,26 @@ buttonReset.addEventListener('click', () => {
     elementCounter = elementNumber
     checkData(0)
 })
-saveGrade.addEventListener('click', () => {
-    let selectUl = document.querySelector('ul')
-    let createLi = document.createElement('li')
-    selectUl.append(createLi)
-    createLi.append(elementCounter, delGrade)
 
-    if(elementCounter < 5){
-        createLi.style.color = 'red'
-    }else{
-        createLi.style.color = 'green'
-    }
+saveGrade.addEventListener('click', () => {
+    const elementLi = document.createElement('li')
+    
+    elementLi.textContent = elementH3.textContent
+    elementLi.style.color = elementH3.style.color
+    
+    const delGrade = document.createElement('button')
+    delGrade.textContent = 'x'
+    delGrade.addEventListener('click', () =>{
+        elementLi.remove()
+    })
+    elementLi.appendChild(delGrade)
+    
+    elementUl.appendChild(elementLi)
 })
 
+delAllGrades.addEventListener('click', () => {
+    elementUl.innerHTML = ''
+})
 
 function createButton (text = ''){
 
