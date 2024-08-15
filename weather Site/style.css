@@ -5,7 +5,7 @@ body{
     align-items: center;
     height: 100dvh;
     font-family: "roboto";
-    background-image: url(img/cloud-shapes-with-blue-background.jpg);
+    /* background-image: url(img/cloud-shapes-with-blue-background.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -15,12 +15,20 @@ body{
     background-color: rgba(255,255,255,.5);
     padding: 25px;
     border-radius: 25px;
+    display:flex;
+    flex-direction: column;
 }
 
 .discription{
     display: flex;
     align-items: center;
     float: left;
+}
+
+.windWrapper{
+    display: flex;
+    gap: 20px;
+    /* font-weight: bold; */
 }
 
 .input{
@@ -38,7 +46,25 @@ body{
     width: 100%;
     background: transparent;
     background-color: rgba(194, 194, 194, 0.5);
+    color: black;
     border: none;
+}
+
+#city::placeholder{
+    padding: 5px;
+}
+
+#city:focus{
+    outline: none;
+    background-color: rgba(135, 134, 134, 0.5);
+}
+
+#city:hover{
+    background-color: rgba(135, 134, 134, 0.5);
+}
+
+#cityOutput{
+    white-space: nowrap;
 }
 
 button{
@@ -47,6 +73,10 @@ button{
     cursor: pointer;
     background-color: rgba(194, 194, 194, 0.5);
     border: none
+}
+
+button:hover{
+    background-color: rgba(135, 134, 134, 0.5);
 }
 
 button svg{
