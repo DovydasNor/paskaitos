@@ -14,7 +14,7 @@ findCity.addEventListener('submit', (event) =>{
 })
 
 function getCity(city) {
-    const weatherApiUrl = `http://api.weatherbit.io/v2.0/current?key=cfef4754224d48a2b3f7b1cd3e8bad7d&city=${city}`
+    const weatherApiUrl = `https://api.weatherbit.io/v2.0/current?key=cfef4754224d48a2b3f7b1cd3e8bad7d&city=${city}`
 
     const output = new Promise((resolve) => {
         fetch(weatherApiUrl)   
