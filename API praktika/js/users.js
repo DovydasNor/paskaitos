@@ -4,7 +4,7 @@ async function init() {
   const mainUsers = document.querySelector('#content')
   const pageTitle = createPageTitle('Users')
   const usersList = await createUsersList()
-  mainUsers.append(navigation(), pageTitle, usersList, navigation)
+  mainUsers.append(navigation(), pageTitle, usersList,)
 }
 init()
 

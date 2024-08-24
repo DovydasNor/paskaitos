@@ -33,6 +33,10 @@ export default function navigation() {
           title: 'Albums',
           url: './albums.html'
       },
+      {
+        title: 'Search',
+        url: './search.html'
+      }
   ]
 
   navListData.forEach(item => {
