@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form id="form">
+        <div class="form-control">
+            <label for="name">Vardas:</label>
+            <input type="text" name="name" id="name" minlength="2" placeholder="vardas" required>
+        </div>
+
+        <div class="form-control">
+            <label for="surname">Pavardė:</label>
+            <input type="text" name="surname" id="surname" minlength="2" placeholder="Pavardė" required>
+        </div>
+
+        <div class="form-control">
+            <label for="age">Amžius:</label>
+            <input type="number" name="age" id="age" min="0" max="122" placeholder="Amžius" required>
+        </div>
+
+        <div class="form-control">
+            <label for="phone">Tel. nr:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Tel. nr">
+        </div>
+
+        <div class="form-control">
+            <label for="email">El. paštas:</label>
+            <input type="email" name="email" id="email" placeholder="El. paštas" required>
+        </div>
+
+        <div class="form-control">
+            <label for="it">IT žinios:</label>
+            <input type="range" name="it" id="it" min="1" max="10">
+        </div>
+
+        <fieldset>
+            <legend>Grupės numeris:</legend>
+          
+            <div>
+              <input type="radio" id="10gr" name="group" value="FEU 10gr." checked />
+              <label for="10gr">FEU 10gr.</label>
+            </div>
+          
+            <div>
+                <input type="radio" id="11gr" name="group" value="FEU 11gr."/>
+                <label for="11gr">FEU 11gr.</label>
+              </div>
+          
+              <div>
+                <input type="radio" id="12gr" name="group" value="FEU 12gr."/>
+                <label for="12gr">FEU 12gr.</label>
+              </div>
+
+              <div>
+                <input type="radio" id="13gr" name="group" value="FEU 13gr."/>
+                <label for="13gr">FEU 13gr.</label>
+              </div>
+
+              <div>
+                <input type="radio" id="14gr" name="group" value="FEU 14gr."/>
+                <label for="14gr">FEU 14gr.</label>
+              </div>
+
+              <div>
+                <input type="radio" id="15gr" name="group" value="FEU 15gr."/>
+                <label for="15gr">FEU 15gr.</label>
+              </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dominančios programavimo kalbos:</legend>
+          
+            <div>
+              <input type="checkbox" id="js" name="language" value="JavaScript" checked />
+              <label for="js">JavaScript</label>
+            </div>
+          
+            <div>
+                <input type="checkbox" id="py" name="language" value="Python"/>
+                <label for="py">Python</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="c++" name="language" value="C++"/>
+                <label for="c++">C++</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="c#" name="language" value="C#"/>
+                <label for="c#">C#</label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="students-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
