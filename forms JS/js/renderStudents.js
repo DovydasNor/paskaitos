@@ -1,60 +1,10 @@
+import { INITIAL_DATA } from "./INITIAL_DATA.js"
 import { studentInfo } from "./script.js"
 import { popUpMessage } from "./script.js"
 
 export default function renderStudents() {
 
-    const INITIAL_DATA = [
-        {
-            name: 'Sam',
-            surname: 'Buca',
-            age: 24,
-            phone: '869268973',
-            email: 'rokas@gmail.com',
-            it: 7,
-            interests: ['JavaScript', 'C#', 'C++'],
-            group: 'FEU 10gr.',
-        },
-        {
-            name: 'Kick',
-            surname: 'Ass',
-            age: 22,
-            phone: '+37069268973',
-            email: 'arunas@gmail.com',
-            it: 9,
-            interests: ['C#', 'C++'],
-            group: 'FEU 11gr.',
-        },
-        {
-            name: 'Bil',
-            surname: 'Asde',
-            age: 20,
-            phone: '869987529',
-            email: 'pricepas@gmail.com',
-            it: 10,
-            interests: ['JavaScript', 'C#', 'C++', 'Python'],
-            group: 'FEU 13gr.',
-        },
-        {
-            name: 'Alus',
-            surname: 'Sula',
-            age: 30,
-            phone: '+370612141',
-            email: 'Petras@gmail.com',
-            it: 6,
-            interests: ['C#'],
-            group: 'FEU 15gr.',
-        },
-        {
-            name: 'Bruce',
-            surname: 'Lee',
-            age: 27,
-            phone: '869268973',
-            email: 'BruceLee@gmail.com',
-            it: 10,
-            interests: ['JavaScript', 'C#', 'C++', 'Python'],
-            group: 'FEU 14gr.',
-        },
-    ]
+
     
     const studentsList = document.getElementById('students-list')
 
