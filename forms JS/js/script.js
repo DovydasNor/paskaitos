@@ -1,17 +1,42 @@
+import renderStudents from './renderStudents.js'
+
 const form = document.getElementById('form')
 console.log(form)
+
+
+
+renderStudents()
+
 
 form.addEventListener('submit', e => {
     e.preventDefault()
 
-    document.querySelectorAll('.error-message').forEach(error => error.remove());
+    let isValid = true
 
-    if(!validateForm()){
+    document.querySelectorAll('input:required').forEach(input => {
+        
+        input.classList.remove('invalid-input')
+
+        if (!input.value) {
+            const errorMessage = document.createElement('span')
+            errorMessage.textContent = 'Šis laukelis yra privalomas'
+            errorMessage.style.color = 'red'
+            errorMessage.classList.add('invalid-input')
+            input.after(errorMessage)
+
+            input.classList.add('invalid-input')
+
+            isValid = false
+        }
+        
+    })
+
+    if(!isValid){
+        const studentsList = document.getElementById('students-list')
+        studentsList.append(popUpMessage('Užpildykite visus privalomus laukelius', 'color-success'))
+
         return
-    } 
-
-    const form = e.target
-    console.dir(form.elements)
+    }
 
     const studentItem = document.createElement('div')
 
@@ -39,7 +64,8 @@ form.addEventListener('submit', e => {
     const checkLanguages = Array.from(form.querySelectorAll('[name="language"]:checked')).map(language => language.value)
     const languages = studentInfo(`Dominančios programavimo kalbos: ${checkLanguages.join(', ')}`)
 
-    const studentCreated = studentCreatedPopUp(`Sukurtas studentas (${name} ${surname}) `)
+    const studentCreated = popUpMessage(`Sukurtas studentas (${name} ${surname}) `, 'color-success')
+    studentsList.prepend(studentCreated)
 
     const showHideButton = document.createElement('button')
     showHideButton.textContent = 'Rodyti asmens duomenis'
@@ -69,19 +95,20 @@ form.addEventListener('submit', e => {
             
         studentItem.remove()
 
-        const studentDeleted = studentDeletedPopUp(`Studentas (${name} ${surname}) sėkmingai ištrintas. `)
+        const studentDeleted = popUpMessage(`Studentas (${name} ${surname}) sėkmingai ištrintas. `, 'color-danger')
         studentsList.prepend(studentDeleted)
     })
     
-    studentsList.prepend(studentCreated)
+    
     studentItem.append(studentNameSurnameAge, studentPhone, studentEmail, studentITknowledge, studentGroup, languages, showHideButton, delStudent)
 
     form.reset()
+
 })
 
 
 const slider = document.getElementById('it')
-sliderOutput = document.createElement('span')
+const sliderOutput = document.createElement('span')
 sliderOutput.textContent = slider.value
 slider.after(sliderOutput)
 
@@ -89,7 +116,7 @@ slider.addEventListener('input', () => {
     sliderOutput.textContent = slider.value
 })
 
-function studentInfo(text) {
+export function studentInfo(text) {
 
     const par = document.createElement('p')
     par.classList.add('student-info')
@@ -98,57 +125,16 @@ function studentInfo(text) {
     return par
 }
 
-function studentCreatedPopUp(text){
+export function popUpMessage(text, className){
 
-    const span = document.createElement('span')
-    span.textContent = text
-    span.style.color = 'green'
-
-    setTimeout(() => {
-        span.remove()
-    }, 5000)
-
-    return span
-
-}
-
-function studentDeletedPopUp(text){
-
-    const span = document.createElement('span')
-    span.textContent = text
-    span.style.color = 'red'
+    const popUpMessage = document.createElement('span')
+    popUpMessage.textContent = text
+    popUpMessage.className = ''
+    popUpMessage.classList.add(className)
 
     setTimeout(() => {
-        span.remove()
+        popUpMessage.remove()
     }, 5000)
 
-    return span
-
-}
-
-function validateForm() {
-
-    let isValid = true
-
-    document.querySelectorAll('input:required').forEach(input => {
-        
-        if (!input.value) {
-            const errorMessage = document.createElement('span')
-            errorMessage.textContent = 'Šis laukelis yra privalomas'
-            errorMessage.style.color = 'red'
-            errorMessage.classList.add('error-message')
-            input.after(errorMessage)
-
-            isValid = false;
-        }
-        
-    })
-
-    if(!isValid){
-        const studentsList = document.getElementById('students-list')
-    studentsList.append(studentDeletedPopUp('Užpildykite visus privalomus laukelius'))
-    }
-    
-    return isValid
-
+    return popUpMessage
 }
