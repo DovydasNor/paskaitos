@@ -1,11 +1,15 @@
-import {INITIAL_DATA} from './INITIAL_DATA.js'
-import {renderInitialData, renderStudent} from './render.js'
+import { INITIAL_DATA } from './INITIAL_DATA.js'
+import { renderInitialData, renderStudent } from './render.js'
 import popUpMessage from './popUpMessage.js'
+import { storeDataToLocalStorage, getDataFromLocalStorage } from './localStorage.js'
 
 const form = document.getElementById('form')
 const studentsList = document.getElementById('students-list')
 
 renderInitialData(INITIAL_DATA)
+getDataFromLocalStorage(form)
+storeDataToLocalStorage(form)
+
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -15,26 +19,26 @@ form.addEventListener('submit', e => {
     let isValid = true
 
     document.querySelectorAll('input:required').forEach(input => {
-        
+        const errorMessage = document.createElement('span')
+        errorMessage.remove()
         input.classList.remove('invalid-input')
+        
 
         if (!input.value) {
-            const errorMessage = document.createElement('span')
             errorMessage.textContent = 'Šis laukelis yra privalomas'
-            errorMessage.style.color = 'red'
-            errorMessage.classList.add('invalid-input')
+            // errorMessage.style.color = 'red'
+            errorMessage.classList.add('color-danger')
             input.after(errorMessage)
-
             input.classList.add('invalid-input')
 
             isValid = false
         }
-        
+
     })
 
     if(!isValid){
         
-        studentsList.append(popUpMessage('Užpildykite visus privalomus laukelius', 'color-success'))
+        studentsList.append(popUpMessage('Užpildykite visus privalomus laukelius', 'color-danger'))
 
         return
     }
@@ -73,6 +77,15 @@ form.addEventListener('submit', e => {
     renderStudent(newStudentData)
     
     form.reset()
+
+    localStorage.removeItem('name')
+    localStorage.removeItem('surname')
+    localStorage.removeItem('age')
+    localStorage.removeItem('it')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('email')
+    localStorage.removeItem('group')
+    localStorage.removeItem('language')
 
     const studentCreated = popUpMessage(`Sukurtas studentas (${name} ${surname}) `, 'color-success')
     studentsList.prepend(studentCreated)

@@ -1,4 +1,5 @@
-import studentInfo from "./studentInfo.js"
+import studentInfo from './studentInfo.js'
+import popUpMessage from './popUpMessage.js'
 
 export function renderInitialData(data) {
     data.forEach(item => {

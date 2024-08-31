@@ -41,15 +41,6 @@ PENKTA UŽDUOTIS (formos validacija naudojant JavaScript):
     2.2. Kiekvienas privalomas input laukelis, kuris nėra užpildytas:
         2.2.1. Turi būti apvestas raudonu rėmeliu.
         2.2.2. Šalia laukelio turi būti parašytas raudonas tekstas: „Šis laukelis yra privalomas".
- 
-ŠEŠTA UŽDUOTIS:
-1. Sukurti pradinius duomenų masyvą, kuriame būtų bent 5 studentų duomenys (objektų formatu).
-2. Sukurti funkciją, kuri priima šiuos duomenis ir užkrovus puslapį į ekraną iškart išveda duomenis iš šio masyvo.
- 
-AŠTUNTA UŽDUOTIS (local storage):
-1. Vedamą tekstą į input elementus išsaugoti į localStorage.
-2. Perkrovus puslapį localStorage esančiomis reikšmėmis užpildyti input elementus.
-3. Jeigu sukuriamas studentas, tai localStorage esančias reikšmes reikia išvalyti.
 
 PAPILDOMA UŽDUOTIS (formos validacija naudojant JavaScript):
 Papildyti formos validaciją. Jeigu:
@@ -59,3 +50,34 @@ Papildyti formos validaciją. Jeigu:
 4. Amžius yra daugiau nei 120 metų, parašyti: „Įvestas amžius yra per didelis".
 5. Telefono numeris yra mažiau nei 9 arba daugiau nei 12 simbolių, parašyti: „Įvestas telefono numeris yra neteisingas".
 6. Elektroninis paštas yra trumpesnis nei 8 simboliai ir jame nėra panaudotas @ ir . simboliai, parašyti: „Įvestas elektroninis paštas yra neteisingas".
+
+ŠEŠTA UŽDUOTIS:
+1. Sukurti pradinius duomenų masyvą, kuriame būtų bent 5 studentų duomenys (objektų formatu).
+2. Sukurti funkciją, kuri priima šiuos duomenis ir užkrovus puslapį į ekraną iškart išveda duomenis iš šio masyvo.
+
+AŠTUNTA UŽDUOTIS (local storage):
+1. Vedamą tekstą į input elementus išsaugoti į localStorage.
+2. Perkrovus puslapį localStorage esančiomis reikšmėmis užpildyti input elementus.
+3. Jeigu sukuriamas studentas, tai localStorage esančias reikšmes reikia išvalyti.
+
+DEŠIMTA UŽDUOTIS:
+1. Studento kūrimo metu reikia sukurti visų studentų masyvą (tokiu pačiu formatu kaip ir initialData).
+2. Šį masyvą pridėti į localStorage.
+3. Puslapio perkrovimo metu iš localStorage esančio masyvo sukurti studentų sąrašą (pradinių studentų sukūrimo funkcionalumas).
+
+
+PAPILDOMAI:
+
+SEPTINTA UŽDUOTIS:
+1. Prie kiekvieno studento pridėti mygtuką, kurį paspaudus leistų redaguoti studento duomenis.
+2. Redaguojant studentą, submit mygtuko tekstas turėtų pasikeisti į „Save Changes".
+3. Pakeitus studento duomenis, turi iššokti <span> elementas, kuris informuoja apie studento duomenų redagavimą: „Studento (Vardas Pavardė) duomenys sėkmingai pakeisti". Šis span elementas dingsta po 5 sekundžių.
+
+DEVINTA UŽDUOTIS (filtravimas):
+1. HTML faile sukurti naują form'ą. Joje pridėti šiuos input elementus: text ir submit.
+2. Formos submit event'o metu, gauti įvestą tekstą ir:
+2.1. Patikrinti ar studentų sąraše yra studentas, kurio varde arba pavardėje yra įvestas tekstas.
+2.2. Ekrane atvaizduoti tik tuos studentus, kurie tenkina sąlygą.
+
+3. Prie formos pridėti select elementą ir jame sukurti sąrašą (option elementus), kuriuose būtų nurodytą pagal kurią informaciją studento yra ieškoma (vardas, pavardė, grupė ir t.t., bet išskyrus telefono numerį ir elektroninį paštą).
+4. Patobulinti formą, kad studento būtų ieškoma ne tik pagal vardą ir pavardę, tačiau ir pagal pasirinktą atributą.
