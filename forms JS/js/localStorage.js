@@ -1,8 +1,5 @@
-import { INITIAL_DATA } from "./INITIAL_DATA.js"
 
-const dataJson = JSON.stringify(INITIAL_DATA)
-
-localStorage.setItem('usersData', dataJson)
+export const INITIAL_DATA = JSON.parse(localStorage.getItem('students-list')) || []
 
 export function storeDataToLocalStorage(form) {
     form.addEventListener('input', e => {
@@ -18,7 +15,7 @@ export function storeDataToLocalStorage(form) {
     })
 }
 
-function getInputDataFromLocalStorage(key, form){
+function getInputDataFromLocalStorage(key, form) {
 
     const localValue = localStorage.getItem(key)
 
@@ -31,28 +28,23 @@ function getInputDataFromLocalStorage(key, form){
 
 
 function getArraysFromLocalStorage(name, form) {
-    const valueFromLocal = JSON.parse(localStorage.getItem(name));
+    const valueFromLocal = JSON.parse(localStorage.getItem(name))
 
     if (!valueFromLocal) {
-        return;
+        return
     }
 
     valueFromLocal.forEach(val => {
-        // Patikriname, ar 'name' ir 'val' turi reikšmes, kad išvengtume klaidų
         if (name && val) {
-            const input = form.querySelector(`[name='${name}'][value='${val}']`);
+            const input = form.querySelector(`[name='${name}'][value='${val}']`)
             if (input) {
                 input.checked = true;
-            } else {
-                console.warn(`Checkbox with name ${name} and value ${val} not found.`);
             }
-        } else {
-            console.warn(`Invalid selector with name ${name} and value ${val}.`);
         }
-    });
+    })
 }
 
-export function getDataFromLocalStorage(form){
+export default function getDataFromLocalStorage(form){
     getInputDataFromLocalStorage('name', form)
     getInputDataFromLocalStorage('surname', form)
     getInputDataFromLocalStorage('age', form)
@@ -61,4 +53,21 @@ export function getDataFromLocalStorage(form){
     getInputDataFromLocalStorage('email', form)
     getInputDataFromLocalStorage('group', form)
     getArraysFromLocalStorage('language', form)
+}
+
+export function removeInputData() {
+    localStorage.removeItem('name')
+    localStorage.removeItem('surname')
+    localStorage.removeItem('age')
+    localStorage.removeItem('it')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('email')
+    localStorage.removeItem('group')
+    localStorage.removeItem('language')
+}
+
+export function exportDataToLocal(obj) {
+    let dataParse = localStorage.getItem(INITIAL_DATA) ? JSON.parse(localStorage.getItem(INITIAL_DATA)) : []
+    dataParse.push(obj)
+    localStorage.setItem('students-list', JSON.stringify(dataParse))
 }

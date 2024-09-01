@@ -1,15 +1,21 @@
-import { INITIAL_DATA } from './INITIAL_DATA.js'
-import { renderInitialData, renderStudent } from './render.js'
+import {renderInitialData, renderStudent} from './render.js'
+import {sliderOutput} from './sliderOutput.js'
 import popUpMessage from './popUpMessage.js'
-import { storeDataToLocalStorage, getDataFromLocalStorage } from './localStorage.js'
+import { exportDataToLocal, storeDataToLocalStorage, removeInputData, INITIAL_DATA } from './localStorage.js'
+import getDataFromLocalStorage from './localStorage.js'
+// import {exportDataToLocal, storeDataToLocalStorage} from './localStorage.js'
+// import getDataFromLocalStorage from './localStorage.js'
+// import { removeInputData } from './localStorage.js'
+// import { INITIAL_DATA } from './localStorage.js'
 
 const form = document.getElementById('form')
-const studentsList = document.getElementById('students-list')
 
 renderInitialData(INITIAL_DATA)
 getDataFromLocalStorage(form)
 storeDataToLocalStorage(form)
+sliderOutput()
 
+const studentsList = document.getElementById('students-list')
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -26,7 +32,6 @@ form.addEventListener('submit', e => {
 
         if (!input.value) {
             errorMessage.textContent = 'Šis laukelis yra privalomas'
-            // errorMessage.style.color = 'red'
             errorMessage.classList.add('color-danger')
             input.after(errorMessage)
             input.classList.add('invalid-input')
@@ -59,7 +64,6 @@ form.addEventListener('submit', e => {
     const email = emailInput.value
     const it = itInput.value
     const group = groupInput.value
-
     const interests = [...langInput].map(input => input.value)
 
     const newStudentData = {
@@ -74,28 +78,14 @@ form.addEventListener('submit', e => {
         id: Math.random()
     }
 
+    exportDataToLocal(newStudentData)
+
     renderStudent(newStudentData)
     
     form.reset()
 
-    localStorage.removeItem('name')
-    localStorage.removeItem('surname')
-    localStorage.removeItem('age')
-    localStorage.removeItem('it')
-    localStorage.removeItem('phone')
-    localStorage.removeItem('email')
-    localStorage.removeItem('group')
-    localStorage.removeItem('language')
+    removeInputData()
 
     const studentCreated = popUpMessage(`Sukurtas studentas (${name} ${surname}) `, 'color-success')
     studentsList.prepend(studentCreated)
-})
-
-const slider = document.getElementById('it')
-const sliderOutput = document.createElement('span')
-sliderOutput.textContent = slider.value
-slider.after(sliderOutput)
-
-slider.addEventListener('input', () => {
-    sliderOutput.textContent = slider.value
-})
+    })

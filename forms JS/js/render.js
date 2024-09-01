@@ -1,6 +1,8 @@
 import studentInfo from './studentInfo.js'
 import popUpMessage from './popUpMessage.js'
 
+studentInfo()
+
 export function renderInitialData(data) {
     data.forEach(item => {
         renderStudent(item)
@@ -64,5 +66,3 @@ export function renderStudent(data) {
     studentItem.append(studentNameSurnameAge, studentPhone, studentEmail, studentITknowledge, studentGroup, language, showHideButton, delStudent)
     studentsList.prepend(studentItem)
 }
-
-studentInfo()
