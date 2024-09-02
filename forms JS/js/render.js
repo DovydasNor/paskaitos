@@ -1,12 +1,18 @@
 import studentInfo from './studentInfo.js'
 import popUpMessage from './popUpMessage.js'
+import { importDataFromLocal } from './localStorage.js'
+import buttonCreate from './buttonCreator.js'
 
 studentInfo()
 
-export function renderInitialData(data) {
-    data.forEach(item => {
+export function renderInitialData() {
+
+    const studentsData = importDataFromLocal()
+
+    studentsData.forEach(item => {
         renderStudent(item)
     })
+    
 }
 
 export function renderStudent(data) {
@@ -30,10 +36,8 @@ export function renderStudent(data) {
 
     const language = studentInfo(`Dominančios programavimo kalbos: ${interests.join(', ')}`)
 
-    const showHideButton = document.createElement('button')
-    showHideButton.textContent = 'Rodyti asmens duomenis'
-
-
+    const showHideButton = buttonCreate('Rodyti asmens duomenis')
+    
     let isVisible = false
 
     showHideButton.addEventListener('click', () => {
@@ -52,10 +56,13 @@ export function renderStudent(data) {
         }
     })
 
-    const delStudent = document.createElement('button')
-    delStudent.textContent = 'Ištrinti studentą'
-
+    const delStudent = buttonCreate('Ištrinti studentą')
+    
     delStudent.addEventListener('click', () => {
+
+        const dataFromLocal = importDataFromLocal()
+        const updatedDataFromLocal = dataFromLocal.filter(student => student.id !== id)
+        localStorage.setItem('students-list', JSON.stringify(updatedDataFromLocal))
             
         studentItem.remove()
 

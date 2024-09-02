@@ -1,6 +1,4 @@
 
-export const INITIAL_DATA = JSON.parse(localStorage.getItem('students-list')) || []
-
 export function storeDataToLocalStorage(form) {
     form.addEventListener('input', e => {
         const { name, value, type } = e.target
@@ -44,7 +42,7 @@ function getArraysFromLocalStorage(name, form) {
     })
 }
 
-export default function getDataFromLocalStorage(form){
+export function getDataFromLocalStorage(form){
     getInputDataFromLocalStorage('name', form)
     getInputDataFromLocalStorage('surname', form)
     getInputDataFromLocalStorage('age', form)
@@ -67,7 +65,13 @@ export function removeInputData() {
 }
 
 export function exportDataToLocal(obj) {
-    let dataParse = localStorage.getItem(INITIAL_DATA) ? JSON.parse(localStorage.getItem(INITIAL_DATA)) : []
+    let dataParse = localStorage.getItem('students-list') ? JSON.parse(localStorage.getItem('students-list')) : []
     dataParse.push(obj)
     localStorage.setItem('students-list', JSON.stringify(dataParse))
+}
+
+export function importDataFromLocal() {
+    const initialData = localStorage.getItem('students-list') ? JSON.parse(localStorage.getItem('students-list')) : []
+
+    return initialData
 }
